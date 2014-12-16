@@ -64,10 +64,14 @@ public static int numberIn;
 		int totalQ=0;
 		int correct=0; 
 		int left=0;
-		int right=0; 
+		int right=myArray.size()-1;
+		int mid= (int)((left+right)/2); 
 		do
 			{
-			
+			Scanner keyboardL= new Scanner(System.in);
+			Scanner keyboardR= new Scanner(System.in);
+			Scanner keyboardM= new Scanner(System.in);
+			Scanner keyboardMN= new Scanner(System.in);
 			
 			
 			
