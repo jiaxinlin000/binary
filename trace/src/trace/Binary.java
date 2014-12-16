@@ -69,9 +69,32 @@ public static int numberIn;
 		do
 			{
 			Scanner keyboardL= new Scanner(System.in);
+			System.out.println("What is left?");
+			int leftA= keyboardL.nextInt();
+			if(leftA==left)
+				{
+				correct++;
+				}
 			Scanner keyboardR= new Scanner(System.in);
+			int rightA= keyboardR.nextInt();
+			if(rightA==right)
+				{
+				correct++;
+				}
 			Scanner keyboardM= new Scanner(System.in);
+			int midA= keyboardM.nextInt();
+			if(midA==mid)
+				{
+				correct++;
+				}
 			Scanner keyboardMN= new Scanner(System.in);
+			int midNumber= (int)myArray.get(mid);
+			int midNumberA= keyboardMN.nextInt();
+			if(midNumberA==midNumber)
+				{
+				correct++;
+				}
+			
 			
 			
 			
