@@ -95,7 +95,18 @@ public static int numberIn;
 				correct++;
 				}
 			
-			
+			if(midNumber>target)
+				{
+				left= mid+1;
+				}
+			else if(midNumber<target)
+				{
+				right=mid-1;
+				}
+			else 
+				{
+				finish=false; 
+				}
 			
 			
 			}while(!finish); 
