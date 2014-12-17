@@ -6,9 +6,11 @@ import java.util.ArrayList;
 public class Binary
 	{
 public static int numberIn; 
+public static boolean yes; 
 	public static void main(String[] args)
 		{
-	
+		
+	do{
 		ArrayList myArray= new ArrayList(); 
 		boolean answerYes= true; 
 		do
@@ -66,51 +68,99 @@ public static int numberIn;
 		int left=0;
 		int right=myArray.size()-1;
 		int mid= (int)((left+right)/2); 
+		int midNumber= (int)myArray.get(mid);
 		do
 			{
+			totalQ=totalQ+4; 
 			Scanner keyboardL= new Scanner(System.in);
 			System.out.println("What is left?");
 			int leftA= keyboardL.nextInt();
 			if(leftA==left)
 				{
 				correct++;
+				System.out.println("correct!"); 
 				}
+			else 
+			{
+				System.out.println("The correct answer is "+left); 
+			}
+			System.out.println("What is right?"); 
 			Scanner keyboardR= new Scanner(System.in);
 			int rightA= keyboardR.nextInt();
 			if(rightA==right)
 				{
 				correct++;
+				System.out.println("correct!"); 
 				}
+			else 
+			{
+				System.out.println("The correct answer is "+right); 
+			}
+			System.out.println("What is mid?"); 
 			Scanner keyboardM= new Scanner(System.in);
 			int midA= keyboardM.nextInt();
 			if(midA==mid)
 				{
 				correct++;
+				System.out.println("correct!"); 
 				}
+			else 
+			{
+				System.out.println("The correct answer is "+mid); 
+			}
+			System.out.println("What is the number at mid?"); 
 			Scanner keyboardMN= new Scanner(System.in);
-			int midNumber= (int)myArray.get(mid);
+			
 			int midNumberA= keyboardMN.nextInt();
 			if(midNumberA==midNumber)
 				{
 				correct++;
+				System.out.println("correct!"); 
 				}
+			else 
+			{
+				System.out.println("The correct answer is "+midNumber); 
+			}
 			
-			if(midNumber>target)
+			if(midNumber<target)
 				{
 				left= mid+1;
 				}
-			else if(midNumber<target)
+			else if(midNumber>target)
 				{
 				right=mid-1;
 				}
 			else 
 				{
 				finish=false; 
+				System.out.println("You got "+correct+" correct out of "+ totalQ); 
 				}
 			
 			
-			}while(!finish); 
+			}while(finish); 
+		System.out.println("Do you want to continue?");
+		Scanner keyboard= new Scanner(System.in); 
+		String answer= keyboard.nextLine();
 		
+		switch(answer)
+		{
+		case "Yes":
+		case"YES":
+		case "yes":
+		{
+			yes=true;
+			break; 
+		}
+		case"No":
+		case"no":
+		case"NO":
+		{
+			yes=false;
+			break;
+		}
+		}
+		
+		}while(yes); 
 		
 		
 		
