@@ -125,10 +125,14 @@ public static boolean yes;
 			if(midNumber<target)
 				{
 				left= mid+1;
+				mid= (int)((left+right)/2); 
+				midNumber= (int)myArray.get(mid);
 				}
 			else if(midNumber>target)
 				{
 				right=mid-1;
+				mid= (int)((left+right)/2); 
+				midNumber= (int)myArray.get(mid);
 				}
 			else 
 				{
